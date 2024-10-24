@@ -1,0 +1,154 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #032757;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+.header-img {
+  width: 80px; /* Ajuste o tamanho conforme necessário */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Seções */
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home .sobre-text p {
+  text-align: justify;
+}
+/* Projetos */
+.projeto {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.projeto h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.projeto p {
+  margin: 0.5rem 0;
+}
+
+.projeto a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projeto a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de Contato */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #032757;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+}
+.links a {
+  margin: 0 10px; /* Espaçamento entre os ícones */
+  font-size: 24px; /* Tamanho dos ícones (ajuste conforme necessário) */
+  color: #5f9ea0; /* Cor dos ícones (ajuste conforme necessário) */
+}
+.footer-img {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
