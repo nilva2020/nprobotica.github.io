@@ -1,60 +1,212 @@
 /* Estilos Gerais */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-h1,
-h2 {
-  text-align: center;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #032757;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-.header-img {
-  width: 80px; /* Ajuste o tamanho conforme necessário */
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-nav ul {
   list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 1rem;
-}
-
-nav ul li a {
-  color: #fff;
   text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-image: url(/img/homeDark.png);
 }
 
-/* Seções */
-section {
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 800px;
+main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* hamburguer*/
+
+.hamburguer {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 100;
+  right: 2rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: 1s;
+  transition-delay: 0.2s;
+}
+
+.show-menu .hamburguer {
+  right: 13rem;
+  transition-delay: 0.2s;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.1rem 0.1rem 1px #000;
+  transition: transform 1.3s;
 }
 
-.home .sobre-text p {
+.show-menu #line1 {
+  transform: rotate(45deg) translate(0.3rem, 0.45rem);
+}
+.show-menu #line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+.show-menu #line3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.45rem);
+}
+
+.hamburguer span {
+  position: absolute;
+  left: 3rem;
+  height: 1.7rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9eff0e4;
+  color: #fff;
+  font-family: var(--font-action);
+  opacity: 0;
+}
+
+.hamburguer span::before {
+  content: "";
+  position: absolute;
+  border-right: 0.5rem solid #00b4d886;
+  border-top: 0.5rem solid transparent;
+  border-left: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+  opacity: 1;
+}
+
+/* header*/
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.img-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+}
+
+.banner {
+  position: absolute;
+  bottom: 35%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+header .banner h1,
+h2,
+p {
+  color: #fff;
+}
+
+.banner p {
   text-align: justify;
 }
+
+/* sidebar */
+
+.sidebar {
+  width: 16rem;
+  height: 100vh;
+  background: #33deca8a;
+  background: -webkit-linear-gradient(to bottom, #244739, #000a1a);
+  background: linear-gradient(to bottom, #176e56, #00001a);
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  right: -20rem;
+  transition: all 1s;
+  z-index: 80;
+}
+
+.show-menu .sidebar {
+  right: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.menu-link {
+  font-family: var(--font-action);
+  font-size: 1.5rem;
+  color: var(--color-contrast);
+  text-shadow: 2px 2px 2px var(--color-second-two);
+  transition: color 0.5s;
+}
+
+.menu-link:hover {
+  color: rgb(21, 98, 88);
+  text-shadow: 2px 2px 2px #000;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media i {
+  background-color: var(--color-contrast);
+  color: var(--color-primary-two);
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 1s;
+}
+
+.social-media i:hover {
+  font-size: 1.4rem;
+  color: var(--color-second-one);
+  box-shadow: 0rem 0rem 1rem var(--color-second-one);
+  transition: 0.5s;
+}
+
 /* Projetos */
 .projeto {
   margin-bottom: 2rem;
@@ -84,43 +236,10 @@ section {
   text-decoration: underline;
 }
 
-/* Formulário de Contato */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  margin-bottom: 0.5rem;
-}
-
-form input,
-form textarea {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form button {
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #333;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
 /* Rodapé */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #032757;
   color: #fff;
 }
 
@@ -134,21 +253,44 @@ footer {
   color: #5f9ea0; /* Cor dos ícones (ajuste conforme necessário) */
 }
 .footer-img {
-  position: absolute;
   bottom: 10px;
   right: 10px;
   width: 50px; /* Ajuste o tamanho conforme necessário */
-  opacity: 0.5;
 }
 
-@media (max-width: 600px) {
-  nav ul li {
-    display: block;
-    margin-bottom: 1rem;
+#link-topo:hover {
+  background: -webkit-linear-gradient(to left, #3fdcfc, #7c00be);
+  background: linear-gradient(to left, #3fdcfc, #7c00be);
+}
+#link-topo {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-second-one);
+  background: -webkit-linear-gradient(
+    to right,
+    var(--color-primary-one),
+    var(--color-second-one)
+  );
+  background: linear-gradient(
+    to left,
+    var(--color-primary-one),
+    var(--color-second-one)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.6rem #00000009;
+  z-index: 2;
+}
+
+@media (max-width: 650px){
+.img-wrapper video {
+    object-position: left;
   }
 
-  section {
-    margin: 1rem;
-    padding: 1rem;
-  }
-}
+@media (max-width: 600px)
