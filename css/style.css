@@ -8,6 +8,53 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+/*inicio form*/
+.contato-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex: 1;
+  margin-top: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+
+label {
+  margin-top: 10px;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #5f9ea0;
+  color: #dcdcdc;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: #008080;
+}
+/*fim form*/
 
 .banner-projetos {
   width: 100%;
@@ -205,18 +252,17 @@ body {
 /*fim botao*/
 /* Footer */
 footer {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #0a0a0a;
-    color: white;
-    width: 100%;
-    height: auto;
-    margin-top: auto; /* Garante que o rodapé fique no final da página */
-    flex-shrink: 0; /* Garante que o rodapé não encolha */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0a0a0a; /* Cor de fundo preta */
+  color: white;
+  width: 100%;
+  height: auto;
+  margin-top: auto; /* Garante que o rodapé fique no final da página */
+  flex-shrink: 0; /* Garante que o rodapé não encolha */
+}
 
 footer .social-media,
 footer .copyright,
