@@ -6,7 +6,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #e6e5dd; /* Fundo amarelo claro */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: #e0f7fa;
 }
 
 /* Inicio Menu Hamburguer */
@@ -16,7 +17,7 @@ body {
   right: 10px;
   z-index: 1000;
   cursor: pointer;
-  color: #008080;
+  color: #ff6400;
 }
 
 #menu {
@@ -27,7 +28,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  color: #008080;
+  color: #ff6400;
   z-index: 999;
   justify-content: center;
   align-items: center;
@@ -44,7 +45,7 @@ body {
 }
 
 #menu nav ul li a {
-  color: #008080;
+  color: #ff6400;
   text-decoration: none;
   font-size: 24px;
 }
@@ -163,11 +164,12 @@ body {
     ); /* Ajuste o valor conforme necessário */
   }
 }
+
 /*Fim página Index/Home*/
 
 /*Inicio Botao Saiba Mais*/
 .btn {
-  background-color: #5f9ea0;
+  background-color: #ff6400;
   color: #dcdcdc;
   text-decoration: none;
   padding: 10px 10px;
@@ -183,12 +185,12 @@ body {
 }
 
 .btn:hover {
-  background-color: #008080;
+  background-color: #ff6400;
 }
 
 @keyframes animate-outline {
   from {
-    outline: 0px solid #428f7178;
+    outline: 0px solid #ff6400;
   }
   to {
     outline: 15px solid #5aef9d00;
@@ -242,7 +244,7 @@ body {
 }
 
 .btn-projeto {
-  background-color: #5f9ea0;
+  background-color: #ff6400;
   color: #dcdcdc;
   margin-top: 10px;
   text-decoration: none;
@@ -255,7 +257,7 @@ body {
 }
 
 .btn-projeto:hover {
-  background-color: #008080;
+  background-color: #ff6400;
 }
 
 /* Fim página projetos */
@@ -325,7 +327,7 @@ body {
 /*inicio página contato form*/
 
 header {
-  background-color: #008080; /* Laranja vibrante */
+  background-color: #ff6400; /* Laranja vibrante */
   padding: 10px 0;
 }
 
@@ -363,7 +365,7 @@ header nav ul li a {
 .contact-section h1 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #008080; /* Laranja vibrante */
+  color: #ff6400; /* Laranja vibrante */
 }
 
 .contact-section p {
@@ -383,7 +385,7 @@ header nav ul li a {
 .contact-section label {
   margin-top: 10px;
   font-size: 16px;
-  color: #008080; /* Laranja vibrante */
+  color: #ff6400; /* Laranja vibrante */
   font-weight: bold;
 }
 
@@ -397,7 +399,7 @@ header nav ul li a {
 }
 
 .contact-section button {
-  background-color: #008080; /* Laranja vibrante */
+  background-color: #ff6400; /* Laranja vibrante */
   color: white;
   margin-top: 20px;
   padding: 10px 15px;
@@ -470,7 +472,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #008080; /* Laranja vibrante */
+  background-color: #ff6400; /* Laranja vibrante */
   color: white;
   font-weight: bold;
   width: 100%;
