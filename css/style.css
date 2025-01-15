@@ -3,59 +3,202 @@ body {
   font-family: "Abel", sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #e6e5dd; /* Fundo amarelo claro */
 }
-/*inicio form*/
-.contato-container {
+
+/* Inicio Menu Hamburguer */
+.hamburguer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  color: #008080;
+}
+
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: #008080;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#menu nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu nav ul li {
+  margin: 20px 0;
+}
+
+#menu nav ul li a {
+  color: #008080;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+#fechar-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-color: #eff3f3;
+}
+/* Fim Menu Hamburguer */
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.whatsapp-button a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.whatsapp-button a:hover {
+  color: #e0f7fa;
+}
+/* Fim do Botão do WhatsApp */
+
+/* Inicio Página Index/Home */
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 20px;
-  flex: 1;
-  margin-top: 20px;
   text-align: center;
+  height: 100vh; /* Ajuste a altura conforme necessário */
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.text-container {
   max-width: 600px;
 }
 
-label {
-  margin-top: 10px;
-  text-align: left;
+.text-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-input,
-textarea {
+.text-container h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Seção de Projetos */
+.projetos-destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  position: relative;
 }
 
-button {
+.projetos-destaque h2 {
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+.carousel {
+  display: flex;
+  animation: slide 10s infinite linear;
+}
+
+.projeto {
+  flex: 0 0 auto;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  margin: 0 10px;
+  text-align: center;
+}
+
+.projeto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.projeto h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-300px * 3)
+    ); /* Ajuste o valor conforme necessário */
+  }
+}
+/*Fim página Index/Home*/
+
+/*Inicio Botao Saiba Mais*/
+.btn {
   background-color: #5f9ea0;
   color: #dcdcdc;
-  margin-top: 20px;
-  padding: 10px 15px;
-  border: none;
+  text-decoration: none;
+  padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
+  display: inline-block;
   transition: 0.1s;
+  width: auto; /* Garante que o botão não ocupe toda a largura */
 }
 
-button:hover {
+.btn.animate-btn {
+  animation: animate-outline 1s ease-out infinite;
+}
+
+.btn:hover {
   background-color: #008080;
 }
-/*fim form*/
 
+@keyframes animate-outline {
+  from {
+    outline: 0px solid #428f7178;
+  }
+  to {
+    outline: 15px solid #5aef9d00;
+  }
+}
+/*end animação*/
+
+/*Fim botão Saiba Mais*/
+
+/* Inicio página projeto */
 .banner-projetos {
   width: 100%;
   height: auto; /* Ajuste automático da altura */
@@ -108,12 +251,16 @@ button:hover {
   cursor: pointer;
   display: inline-block;
   transition: 0.1s;
+  width: auto; /* Garante que o botão não ocupe toda a largura */
 }
 
 .btn-projeto:hover {
   background-color: #008080;
 }
 
+/* Fim página projetos */
+
+/*Inicio pagina Sobre*/
 .sobre-container {
   display: flex;
   align-items: center;
@@ -140,124 +287,192 @@ button:hover {
   flex: 2;
   max-width: 600px;
 }
+/*Fim pagina Sobre*/
 
-/* Menu Hamburguer */
-.hamburguer {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-  cursor: pointer;
-  color: #008080;
+/* Seção de Projetos */
+.projetos-destaque {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-#menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  color: #008080;
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.projetos-destaque h2 {
+  margin-bottom: 40px;
 }
 
-#menu nav ul {
+.projeto {
+  display: inline-block;
+  margin: 20px;
+  text-align: left;
+}
+
+.projeto img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.projeto h3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.projeto p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/*inicio página contato form*/
+
+header {
+  background-color: #008080; /* Laranja vibrante */
+  padding: 10px 0;
+}
+
+header nav ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
   padding: 0;
 }
 
-#menu nav ul li {
-  margin: 20px 0;
+header nav ul li {
+  margin: 0 15px;
 }
 
-#menu nav ul li a {
-  color: #008080;
+header nav ul li a {
+  color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-#fechar-menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  background-color: #eff3f3;
+.contact-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Página Home */
-.img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.contact-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #008080; /* Laranja vibrante */
 }
 
-.img-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
   text-align: center;
-  color: #ffffff;
+  color: #333333;
 }
 
-.banner h1,
-.banner h2 {
-  margin: 0;
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-section label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #008080; /* Laranja vibrante */
+  font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-section button {
+  background-color: #008080; /* Laranja vibrante */
+  color: white;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+  background-color: #e65100; /* Laranja escuro */
+}
+
+.whatsapp-link {
   margin-top: 20px;
 }
 
-/*botao*/
-.banner .btn {
-  background-color: #5f9ea0;
-  color: #dcdcdc;
-  margin-top: 30px;
+.whatsapp-link a {
+  color: #25d366;
+  font-size: 18px;
   text-decoration: none;
-  padding: 15px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.1s;
+  display: flex;
+  align-items: center;
 }
 
-.banner .btn.animate-btn {
-  animation: animate-outline 1s ease-out infinite;
+.whatsapp-link a i {
+  margin-right: 10px;
+  font-size: 24px;
 }
 
-.banner .btn:hover {
-  background-color: #008080;
-}
-
-@keyframes animate-outline {
+/* Animações */
+@keyframes fadeIn {
   from {
-    outline: 0px solid #428f7178;
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    outline: 15px solid #5aef9d00;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-/*end animação*/
 
-/*fim botao*/
+/* Responsivo */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 20px;
+  }
+
+  .contact-section h1 {
+    font-size: 28px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
+/*fim página Contato form*/
+
 /* Footer */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #0a0a0a; /* Cor de fundo preta */
+  background-color: #008080; /* Laranja vibrante */
   color: white;
+  font-weight: bold;
   width: 100%;
   height: auto;
   margin-top: auto; /* Garante que o rodapé fique no final da página */
@@ -277,13 +492,13 @@ footer .social-media {
 
 footer .social-media a {
   margin-right: 10px;
-  color: #008080;
+  color: white;
   text-decoration: none;
 }
 
 footer .copyright {
   text-align: center;
-  color: #008080;
+  color: white;
 }
 
 footer .logo {

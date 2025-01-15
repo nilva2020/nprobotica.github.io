@@ -26,6 +26,7 @@
     <!-- CSS Principal -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <!-- Menu Hamburguer -->
     <div id="menu-hamburguer" class="hamburguer">
@@ -42,30 +43,36 @@
         </ul>
       </nav>
     </div>
-    <!-- Página Contato -->
-    <div class="contato-container">
-      <h1>Contato</h1>
-      <form
-        action="mailto:nilvatecnologia@outlook.com"
-        method="post"
-        enctype="text/plain"
+
+    <main>
+      <section class="contact-section">
+        <h1>Contato</h1>
+        <p>Estou pronta para desenvolver projetos do tamanho do seus sonhos.</p>
+        <p>Vamos conversar?</p>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <!-- Whatsapp-->
+    <div class="whatsapp-button">
+      <a
+        href="https://api.whatsapp.com/send?phone=5531993108568"
+        target="_blank"
       >
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="mensagem">Assunto:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+        <i class="fa fa-whatsapp"></i>
+      </a>
     </div>
-    <!-- Rodapé -->
+
     <footer>
       <div class="social-media">
         <a href="https://www.instagram.com/nprobotica/" target="_blank"
@@ -91,6 +98,6 @@
       </div>
     </footer>
     <!-- Js -->
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
