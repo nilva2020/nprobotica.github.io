@@ -169,7 +169,7 @@ body {
 
 /*Inicio Botao Saiba Mais*/
 .btn {
-  background-color: #ff6400;
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
   color: #dcdcdc;
   text-decoration: none;
   padding: 10px 10px;
@@ -185,7 +185,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #ff6400;
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
 }
 
 @keyframes animate-outline {
@@ -244,7 +244,7 @@ body {
 }
 
 .btn-projeto {
-  background-color: #ff6400;
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
   color: #dcdcdc;
   margin-top: 10px;
   text-decoration: none;
@@ -257,7 +257,7 @@ body {
 }
 
 .btn-projeto:hover {
-  background-color: #ff6400;
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
 }
 
 /* Fim página projetos */
@@ -327,7 +327,7 @@ body {
 /*inicio página contato form*/
 
 header {
-  background-color: #ff6400; /* Laranja vibrante */
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
   padding: 10px 0;
 }
 
@@ -399,7 +399,7 @@ header nav ul li a {
 }
 
 .contact-section button {
-  background-color: #ff6400; /* Laranja vibrante */
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
   color: white;
   margin-top: 20px;
   padding: 10px 15px;
@@ -410,7 +410,7 @@ header nav ul li a {
 }
 
 .contact-section button:hover {
-  background-color: #e65100; /* Laranja escuro */
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
 }
 
 .whatsapp-link {
@@ -472,7 +472,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #ff6400; /* Laranja vibrante */
+  background: radial-gradient(ellipse at bottom, #fda766 0%, #ff6200 100%);
   color: white;
   font-weight: bold;
   width: 100%;
